@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+
 title: '最初のブログ記事'
 pubDate: 2024-02-12
 description: 'これは最初のブログ記事です。'
