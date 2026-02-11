@@ -31,70 +31,84 @@ const posts = (await getCollection('blog')).sort(
 
 <style>
 	main {
-		width: 960px;
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	section {
+		margin-top: 2rem;
 	}
 	ul {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		gap: 2rem;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	ul li {
-		width: calc(50% - 1rem);
+		transition: transform 0.2s ease;
 	}
 	ul li * {
 		text-decoration: none;
 		transition: 0.2s ease;
 	}
 	ul li:first-child {
-		width: 100%;
-		margin-bottom: 1rem;
+		grid-column: 1 / -1;
+		margin-bottom: 2rem;
 		text-align: center;
 	}
 	ul li:first-child img {
 		width: 100%;
+		max-height: 500px;
+		object-fit: cover;
 	}
 	ul li:first-child .title {
-		font-size: 2.369rem;
+		font-size: 2.5rem;
+		margin-top: 1rem;
 	}
 	ul li img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16/9;
+		object-fit: cover;
 		margin-bottom: 0.5rem;
-		border-radius: 12px;
+		border-radius: 4px;
+		border: 1px solid var(--border-color);
 	}
 	ul li a {
 		display: block;
 	}
 	.title {
-		margin: 0;
+		margin: 0.5rem 0 0.2rem 0;
 		color: rgb(var(--black));
-		line-height: 1;
+		line-height: 1.4;
+		font-size: 1.25rem;
+		font-weight: 700;
 	}
 	.date {
 		margin: 0;
-		color: rgb(var(--gray));
+		color: var(--gray);
+		font-size: 0.9rem;
+		font-family: 'Inter', sans-serif;
 	}
-	ul li a:hover h4,
-	ul li a:hover .date {
+	ul li a:hover .title {
 		color: rgb(var(--accent));
 	}
 	ul li a:hover img {
-		box-shadow: var(--box-shadow);
+		border-color: rgb(var(--accent));
+		opacity: 0.9;
 	}
 	@media (max-width: 720px) {
 		ul {
-			gap: 0.5em;
-		}
-		ul li {
-			width: 100%;
-			text-align: center;
+			gap: 1.5rem;
 		}
 		ul li:first-child {
-			margin-bottom: 0;
+			margin-bottom: 1rem;
 		}
 		ul li:first-child .title {
-			font-size: 1.563em;
+			font-size: 1.8rem;
 		}
 	}
 </style>

@@ -38,55 +38,62 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = '/yh-blog/bl
 
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--gray: 96, 115, 159;
-		--gray-light: 229, 233, 240;
-		--gray-dark: 34, 41, 57;
-		--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-		--box-shadow: 0 2px 6px rgba(var(--gray-dark), 25%), 0 8px 24px rgba(var(--gray-dark), 33%),
-			0 16px 32px rgba(var(--gray-dark), 33%);
+		--accent: 0, 86, 179; /* Deep Blue */
+		--accent-light: 224, 240, 255;
+		--accent-dark: 0, 39, 82;
+		--black: 34, 34, 34;
+		--gray: 102, 102, 102;
+		--gray-light: 248, 249, 250;
+		--gray-dark: 51, 51, 51;
+		--white: 255, 255, 255;
+		--border-color: 230, 230, 230;
 	}
 	html {
 		font-family: 'Inter', 'Noto Sans JP', sans-serif;
-		background: #fff;
-		color: rgb(var(--gray-dark));
+		background: var(--white);
+		color: rgb(var(--black));
+		line-height: 1.8;
+		letter-spacing: 0.02em;
 	}
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    main {
-        flex: 1;
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 3em 1em;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        margin: 0 0 0.5rem 0;
-        color: rgb(var(--gray-dark));
-        line-height: 1.2;
-    }
-    h1 {
-        font-size: 3.052em;
-    }
-    /* Customize scrollbar */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-        background: rgb(var(--gray-light));
-    }
-    ::-webkit-scrollbar-thumb {
-        background: rgb(var(--gray));
-        border-radius: 5px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(var(--gray-dark));
-    }
+	body {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	main {
+		flex: 1;
+		width: 100%;
+		max-width: 800px; /* Narrower width for reading */
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0 0 1rem 0;
+		color: rgb(var(--black));
+		line-height: 1.3;
+		font-weight: 700;
+	}
+	h1 {
+		font-size: 2.5rem;
+		letter-spacing: -0.02em;
+	}
+	p {
+		margin-bottom: 1.5rem;
+	}
+	/* Customize scrollbar */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ddd;
+		border-radius: 4px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #ccc;
+	}
 </style>
