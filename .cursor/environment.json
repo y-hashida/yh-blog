@@ -1,0 +1,17 @@
+{
+  "name": "yh-blog",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "astro-dev",
+      "command": "npm run dev -- --host",
+      "description": "Astro development server for the yh-blog site (http://localhost:4321/yh-blog)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "astro-dev",
+      "port": 4321
+    }
+  ]
+}
